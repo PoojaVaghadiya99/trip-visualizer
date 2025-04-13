@@ -1,0 +1,75 @@
+.trip-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 20px;
+    position: relative;
+  }
+  
+  .trip {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    position: relative;
+  }
+  
+  .trip.level-1 {
+    margin-top: 0;
+  }
+  
+  .trip.level-2 {
+    margin-top: 60px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #4a4aff;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .line {
+    height: 2px;
+    width: 80px;
+    background-color: #4a4aff;
+    position: relative;
+    margin: 0 10px;
+  }
+  
+  .line.straight {
+    background-color: #4a4aff;
+  }
+  
+  .line.arrow::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: -4px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 8px solid #007bff;
+  }
+  
+  .line.curve {
+    background: none;
+    width: 80px;
+    height: 40px;
+    border: 2px solid #ff9800;
+    border-color: #ff9800 transparent transparent transparent;
+    border-radius: 40px 0 0 0;
+    transform: rotate(-45deg);
+  }
+  
+  .label {
+    font-size: 12px;
+    color: #333;
+    position: absolute;
+    top: 20px;
+    left: -5px;
+  }
+  

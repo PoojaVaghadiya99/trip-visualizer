@@ -1,1 +1,28 @@
-<p>trip-view works!</p>
+<div class="trip-container">
+    <ng-container *ngFor="let trip of processedTrips; let i = index">
+      <div
+        class="trip"
+        [ngClass]="{
+          'level-1': trip.level === 1,
+          'level-2': trip.level === 2,
+          'continued': trip.type === 'continued',
+          'non-continued': trip.type === 'non-continued',
+          'repeated': trip.type === 'repeated'
+        }"
+      >
+        <div class="dot"></div>
+        <div
+          class="line"
+          [ngClass]="{
+            'straight': trip.type === 'continued',
+            'arrow': trip.type === 'non-continued',
+            'curve': trip.type === 'repeated'
+          }"
+        ></div>
+        <div class="label">
+          {{ trip.source | slice:0:3 | uppercase }} - {{ trip.destination | slice:0:3 | uppercase }}
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  

@@ -1,0 +1,49 @@
+.trip-form-container {
+    max-width: 100%;
+    overflow-x: auto; /* Optional: Add horizontal scroll for small screens */
+  }
+  
+  .trip-form {
+    display: flex;
+    flex-direction: row; /* Make fields appear in one line */
+    gap: 15px;
+    align-items: flex-end; /* Align fields and button at bottom */
+    flex-wrap: wrap; /* Optional: Wrap on smaller screens */
+  }
+  
+  .form-field {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  
+  input {
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 180px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    height: 40px;
+  }
+  
+  button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  

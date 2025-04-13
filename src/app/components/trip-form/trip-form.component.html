@@ -1,1 +1,28 @@
-<p>trip-form works!</p>
+<div class="trip-form-container">
+    <form [formGroup]="tripForm" (ngSubmit)="addTrip()" class="trip-form">
+      <div class="form-field">
+        <label for="source">Start Point</label>
+        <input
+          id="source"
+          type="text"
+          formControlName="source"
+          placeholder="Enter start location"
+          required
+        />
+      </div>
+  
+      <div class="form-field">
+        <label for="destination">End Point</label>
+        <input
+          id="destination"
+          type="text"
+          formControlName="destination"
+          placeholder="Enter end location"
+          required
+        />
+      </div>
+  
+      <button type="submit" [disabled]="tripForm.invalid">Add Trip</button>
+    </form>
+  </div>
+  
