@@ -1,14 +1,14 @@
 .trip-form-container {
     max-width: 100%;
-    overflow-x: auto; /* Optional: Add horizontal scroll for small screens */
+    overflow-x: auto; 
   }
   
   .trip-form {
     display: flex;
-    flex-direction: row; /* Make fields appear in one line */
+    flex-direction: row; 
     gap: 15px;
-    align-items: flex-end; /* Align fields and button at bottom */
-    flex-wrap: wrap; /* Optional: Wrap on smaller screens */
+    align-items: flex-end;
+    flex-wrap: wrap; 
   }
   
   .form-field {

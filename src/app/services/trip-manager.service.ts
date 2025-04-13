@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Trip } from '../models/trip-data.model';
-// import { Trip } from './trip.model';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +14,6 @@ export class TripManagerService {
   addTrip(trip: Trip) {
     const lastTrip = this.trips[this.trips.length - 1];
 
-    // Determine type
     if (lastTrip) {
       if (trip.source === lastTrip.destination) {
         trip.type = 'continued';

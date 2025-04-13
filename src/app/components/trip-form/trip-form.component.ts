@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Trip } from 'src/app/models/trip-data.model';
 import { TripManagerService } from 'src/app/services/trip-manager.service';
-// import { TripManagerService } from '../trip-manager.service';
 
 @Component({
   selector: 'app-trip-form',
